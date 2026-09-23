@@ -1,0 +1,8 @@
+# El PDF del manual NO lleva bytes nulos en su cabecera, asi que git lo toma
+# por texto y avisa de que le cambiara los saltos de linea al sacarlo. Eso no
+# es cosmetico: un PDF lleva la tabla xref con la POSICION EN BYTES de cada
+# objeto, y meter un \r por cada \n corre todas esas posiciones. El archivo
+# sigue pesando parecido y el visor dice que esta danado.
+*.pdf   binary
+*.mp4   binary
+*.webp  binary
